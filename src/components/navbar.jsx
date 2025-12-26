@@ -119,7 +119,7 @@ function Navbar() {
           {/* LOGO */}
           <Link href="/" className="flex flex-col z-50 group relative">
             <span className="text-2xl font-serif font-bold tracking-wide">
-              PER<span className="text-amber-600">.</span>RÉNOVATION
+              PEP<span className="text-amber-600"> </span>RENOVATION
             </span>
           </Link>
 
