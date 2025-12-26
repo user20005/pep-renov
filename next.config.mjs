@@ -1,15 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-  reactCompiler: true,
-  // Active l'exportation statique (HTML/CSS/JS)
+  // Indique à Next.js de générer un site statique (dossier 'out')
   output: 'export',
   
-  // Important : Remplacez 'nom-du-repo' par le nom exact de votre dépôt GitHub.
-  // Si vous utilisez un domaine personnalisé, supprimez cette ligne.
+  // IMPORTANT : Remplace '/pep-renov' par le nom EXACT de ton dépôt GitHub
+  // Si ton dépôt s'appelle "mon-site", mets '/mon-site'
   basePath: '/pep-renov',
-
-  // Nécessaire car l'optimisation d'image par défaut nécessite un serveur
+  
+  // Désactive l'optimisation d'image (nécessaire pour l'export statique)
   images: {
     unoptimized: true,
   },
