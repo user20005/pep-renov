@@ -7,7 +7,7 @@ const nextConfig = {
   
   // Important : Remplacez 'nom-du-repo' par le nom exact de votre dépôt GitHub.
   // Si vous utilisez un domaine personnalisé, supprimez cette ligne.
-  basePath: '/nom-du-repo',
+  basePath: '/pep-renov',
 
   // Nécessaire car l'optimisation d'image par défaut nécessite un serveur
   images: {
@@ -15,4 +15,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

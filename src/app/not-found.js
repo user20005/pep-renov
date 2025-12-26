@@ -1,3 +1,5 @@
+'use client'; // <--- CETTE LIGNE EST OBLIGATOIRE POUR UTILISER onClick
+
 import React from 'react';
 import { Home, ArrowLeft, Construction } from 'lucide-react';
 import Link from "next/link";
@@ -6,10 +8,10 @@ function NotFound() {
   return (
     <div className="relative min-h-screen w-full bg-[#0B0C10] flex items-center justify-center overflow-hidden">
       
-      {/* --- FOND D'AMBIANCE (Similaire au simulateur) --- */}
+      {/* --- FOND D'AMBIANCE --- */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800 via-[#0B0C10] to-black opacity-80"></div>
       
-      {/* Cercles flous pour la profondeur */}
+      {/* Cercles flous */}
       <div className="absolute top-0 right-0 w-125 h-125 bg-amber-600/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-125 h-125 bg-blue-900/10 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -22,7 +24,7 @@ function NotFound() {
         </div>
 
         {/* Le Gros Chiffre 404 */}
-        <h1 className="text-[8rem] md:text-[12rem] leading-none font-serif font-bold text-transparent bg-clip-text bg-linear-to-b from-white/10 to-transparent select-none">
+        <h1 className="text-[8rem] md:text-[12rem] leading-none font-serif font-bold text-transparent bg-clip-text bg-gradient-to-b from-white/10 to-transparent select-none">
           404
         </h1>
 
@@ -47,7 +49,7 @@ function NotFound() {
             Retour à l&apos;accueil
           </Link>
 
-          {/* Bouton Retour en arrière simple */}
+          {/* Bouton Retour en arrière simple (Nécessite 'use client') */}
           <button 
             onClick={() => window.history.back()} 
             className="group px-8 py-4 border border-white/10 text-gray-300 text-xs font-bold uppercase tracking-[0.2em] hover:bg-white/5 hover:border-white/30 transition-all duration-300 rounded-sm flex items-center gap-2"
