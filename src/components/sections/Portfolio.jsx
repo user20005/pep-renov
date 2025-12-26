@@ -48,7 +48,7 @@ function Portfolio() {
             </div>
             
 
-            <Link href="/realisations" className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest border-b border-gray-700 pb-2 hover:border-amber-500 hover:text-amber-500 transition-all">
+            <Link href="/realisation" className="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest border-b border-gray-700 pb-2 hover:border-amber-500 hover:text-amber-500 transition-all">
                 Voir tous les projets
                 <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
             </Link>

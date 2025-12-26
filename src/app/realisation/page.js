@@ -172,7 +172,7 @@ function Realisations() {
               Chaque projet est unique. Discutons de vos envies et transformons votre espace.
           </p>
           <Link 
-             href="./#contact" // Retour vers l'ancre contact de la home (ou une page contact dédiée)
+             href="/#contact" // Retour vers l'ancre contact de la home (ou une page contact dédiée)
             className="inline-flex items-center gap-3 bg-white text-amber-900 px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-gray-100 transition-colors shadow-xl"
           >
               Demander une étude <ArrowRight size={16}/>

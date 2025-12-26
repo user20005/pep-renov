@@ -134,7 +134,7 @@ function Navbar() {
 
             {/* Menu Intérieur AVEC lien */}
             <MegaMenuButton
-              href="/interieur"
+              href="/interieure"
               title="Intérieur"
               data={servicesInterieur}
               scrolled={isSolidNavbar}
