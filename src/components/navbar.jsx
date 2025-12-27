@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,10 +12,7 @@ function Navbar() {
   const [mobileSubMenu, setMobileSubMenu] = useState("");
 
   const pathname = usePathname();
-  // On considère qu'on est sur la home si pathname est "/"
   const isHomePage = pathname === "/";
-
-  // La navbar est solide si on scroll OU si on n'est pas sur la home
   const isSolidNavbar = scrolled || !isHomePage;
 
   useEffect(() => {
@@ -33,36 +31,81 @@ function Navbar() {
     }
   }, [isOpen]);
 
+  // Fonction pour fermer le menu mobile
+  const closeMenu = () => setIsOpen(false);
+
   const servicesInterieur = {
     categories: [
       {
         title: "Rénovation Globale",
         items: [
-          "Maison & Villa",
-          "Appartement Haussmannien",
-          "Loft & Surface Atypique",
-          "Réagencement complet",
-          "Transformation de bureaux",
+          { label: "Maison & Villa", href: "/interieure#renovation-globale" },
+          {
+            label: "Appartement Haussmannien",
+            href: "/interieure#renovation-globale",
+          },
+          {
+            label: "Loft & Surface Atypique",
+            href: "/interieure#renovation-globale",
+          },
+          {
+            label: "Réagencement complet",
+            href: "/interieure#renovation-globale",
+          },
+          {
+            label: "Transformation de bureaux",
+            href: "/interieure#renovation-globale",
+          },
         ],
       },
       {
         title: "Pièces Techniques",
         items: [
-          "Cuisines Haut de Gamme",
-          "Salles de Bain & Spa",
-          "Suite Parentale & Dressing",
-          "Création de trémies & Escaliers",
-          "Aménagement de Combles",
+          {
+            label: "Cuisines Haut de Gamme",
+            href: "/interieure#pieces-techniques",
+          },
+          {
+            label: "Salles de Bain & Spa",
+            href: "/interieure#pieces-techniques",
+          },
+          {
+            label: "Suite Parentale & Dressing",
+            href: "/interieure#pieces-techniques",
+          },
+          {
+            label: "Création de trémies & Escaliers",
+            href: "/interieure#pieces-techniques",
+          },
+          {
+            label: "Aménagement de Combles",
+            href: "/interieure#pieces-techniques",
+          },
         ],
       },
       {
         title: "Finitions & Décoration",
         items: [
-          "Peinture & Enduits décoratifs",
-          "Sols (Parquet, Marbre, Béton)",
-          "Menuiserie sur mesure",
-          "Isolation & Cloisonnement",
-          "Électricité & Domotique",
+          {
+            label: "Peinture & Enduits décoratifs",
+            href: "/interieure#finitions-decoration",
+          },
+          {
+            label: "Sols (Parquet, Marbre, Béton)",
+            href: "/interieure#finitions-decoration",
+          },
+          {
+            label: "Menuiserie sur mesure",
+            href: "/interieure#finitions-decoration",
+          },
+          {
+            label: "Isolation & Cloisonnement",
+            href: "/interieure#finitions-decoration",
+          },
+          {
+            label: "Électricité & Domotique",
+            href: "/interieure#finitions-decoration",
+          },
         ],
       },
     ],
@@ -75,31 +118,34 @@ function Navbar() {
       {
         title: "Architecture & Façade",
         items: [
-          "Ravalement de Façade",
-          "Isolation Extérieure (ITE)",
-          "Traitement de la Pierre",
-          "Toiture & Zinguerie",
-          "Fenêtres & Baies Vitrées",
+          { label: "Ravalement de Façade", href: "/exterieure#facade" },
+          { label: "Isolation Extérieure (ITE)", href: "/exterieure#facade" },
+          { label: "Traitement de la Pierre", href: "/exterieure#facade" },
+          { label: "Toiture & Zinguerie", href: "/exterieure#facade" },
+          { label: "Fenêtres & Baies Vitrées", href: "/exterieure#facade" },
         ],
       },
       {
         title: "Extensions & Structures",
         items: [
-          "Extension Maison & Garage",
-          "Surélévation de toiture",
-          "Véranda & Pergola Bio",
-          "Maçonnerie Générale",
-          "Démolition & Gros Œuvre",
+          { label: "Extension Maison & Garage", href: "/exterieure#extensions" },
+          { label: "Surélévation de toiture", href: "/exterieure#extensions" },
+          { label: "Véranda & Pergola Bio", href: "/exterieure#extensions" },
+          { label: "Maçonnerie Générale", href: "/exterieure#extensions" },
+          { label: "Démolition & Gros Œuvre", href: "/exterieure#extensions" },
         ],
       },
       {
         title: "Paysage & Aménagement",
         items: [
-          "Terrasses (Bois, Pierre, Carrelage)",
-          "Piscine & Bassin",
-          "Allées & Pavage",
-          "Clôtures & Portails",
-          "Éclairage Extérieur",
+          {
+            label: "Terrasses (Bois, Pierre, Carrelage)",
+            href: "/exterieure#paysage",
+          },
+          { label: "Piscine & Bassin", href: "/exterieure#paysage" },
+          { label: "Allées & Pavage", href: "/exterieure#paysage" },
+          { label: "Clôtures & Portails", href: "/exterieure#paysage" },
+          { label: "Éclairage Extérieur", href: "/exterieure#paysage" },
         ],
       },
     ],
@@ -133,20 +179,22 @@ function Navbar() {
               Accueil
             </Link>
 
-            {/* Menu Intérieur AVEC lien */}
+            {/* Menu Intérieur */}
             <MegaMenuButton
-              href="/interieure"
+              href=""
               title="Intérieur"
               data={servicesInterieur}
               scrolled={isSolidNavbar}
+              onLinkClick={closeMenu}
             />
 
-            {/* Menu Extérieur SANS lien direct (exemple) */}
+            {/* Menu Extérieur  */}
             <MegaMenuButton
-              href="#" // Mettez le lien que vous voulez ou laissez vide
+              href=""
               title="Extérieur"
               data={servicesExterieur}
               scrolled={isSolidNavbar}
+              onLinkClick={closeMenu}
             />
 
             <Link
@@ -215,18 +263,20 @@ function Navbar() {
       >
         <Link
           href="/"
-          onClick={() => setIsOpen(false)}
+          onClick={closeMenu}
           className="py-4 border-b border-gray-100 text-lg font-serif text-gray-900 block font-bold"
         >
           Accueil
         </Link>
 
+        
         <MobileAccordion
           title="Rénovation Intérieure"
           id="interieur"
           current={mobileSubMenu}
           set={setMobileSubMenu}
           data={servicesInterieur}
+          onLinkClick={closeMenu} 
         />
         <MobileAccordion
           title="Extérieur & Façade"
@@ -234,12 +284,13 @@ function Navbar() {
           current={mobileSubMenu}
           set={setMobileSubMenu}
           data={servicesExterieur}
+          onLinkClick={closeMenu}
         />
 
         <Link
           href="/realisation"
           className="py-4 border-b border-gray-100 text-lg font-serif text-gray-900 block font-bold"
-          onClick={() => setIsOpen(false)}
+          onClick={closeMenu}
         >
           Nos Réalisations
         </Link>
@@ -249,7 +300,7 @@ function Navbar() {
 }
 
 // COMPOSANT ACCORDÉON MOBILE
-const MobileAccordion = ({ title, id, current, set, data }) => (
+const MobileAccordion = ({ title, id, current, set, data, onLinkClick }) => (
   <div className="py-4 border-b border-gray-100">
     <button
       onClick={() => set(current === id ? "" : id)}
@@ -273,9 +324,16 @@ const MobileAccordion = ({ title, id, current, set, data }) => (
             <p className="text-xs uppercase text-amber-600 font-bold mb-2">
               {cat.title}
             </p>
+            {/* Dans MobileAccordion */}
             {cat.items.map((item, i) => (
               <li key={i} className="text-sm text-gray-600 py-1">
-                {item}
+                <Link 
+                  href={item.href} 
+                  className="block w-full"
+                  onClick={onLinkClick} 
+                >
+                  {item.label}
+                </Link>
               </li>
             ))}
           </div>
@@ -286,44 +344,28 @@ const MobileAccordion = ({ title, id, current, set, data }) => (
 );
 
 // COMPOSANT MEGA MENU (Desktop)
-const MegaMenuButton = ({ title, data, scrolled, href }) => {
+const MegaMenuButton = ({ title, data, scrolled, href, onLinkClick }) => {
   return (
     <div className="group static h-full flex items-center">
-      
-      {/* 1. LE LIEN PRINCIPAL (Bouton du menu) */}
-      {href ? (
-        <Link
-          href={href}
-          className={`relative flex items-center py-8 text-[11px] uppercase tracking-[0.25em] font-bold transition-all duration-500 group-hover:text-amber-600 ${
-            scrolled ? "text-gray-900" : "text-gray-900 lg:text-white"
-          }`}
-        >
-          {title}
-          <ChevronDown
-            size={10}
-            className="ml-2 opacity-50 group-hover:opacity-100 group-hover:-rotate-180 transition-transform duration-500"
-          />
-          <span className="absolute bottom-6 left-1/2 w-0 h-px bg-amber-600 -translate-x-1/2 transition-all duration-500 group-hover:w-full opacity-0 group-hover:opacity-100"></span>
-        </Link>
-      ) : (
-        <div
-          className={`relative flex items-center py-8 text-[11px] uppercase tracking-[0.25em] font-bold transition-all duration-500 group-hover:text-amber-600 cursor-pointer ${
-            scrolled ? "text-gray-900" : "text-gray-900 lg:text-white"
-          }`}
-        >
-          {title}
-          <ChevronDown
-            size={10}
-            className="ml-2 opacity-50 group-hover:opacity-100 group-hover:-rotate-180 transition-transform duration-500"
-          />
-          <span className="absolute bottom-6 left-1/2 w-0 h-px bg-amber-600 -translate-x-1/2 transition-all duration-500 group-hover:w-full opacity-0 group-hover:opacity-100"></span>
-        </div>
-      )}
+      {/* 1. LE LIEN PRINCIPAL  */}
+      <Link
+        href={href}
+        onClick={onLinkClick} // Ferme le menu au clic
+        className={`relative flex items-center py-8 text-[11px] uppercase tracking-[0.25em] font-bold transition-all duration-500 group-hover:text-amber-600 ${
+          scrolled ? "text-gray-900" : "text-gray-900 lg:text-white"
+        }`}
+      >
+        {title}
+        <ChevronDown
+          size={10}
+          className="ml-2 opacity-50 group-hover:opacity-100 group-hover:-rotate-180 transition-transform duration-500"
+        />
+        <span className="absolute bottom-6 left-1/2 w-0 h-px bg-amber-600 -translate-x-1/2 transition-all duration-500 group-hover:w-full opacity-0 group-hover:opacity-100"></span>
+      </Link>
 
       {/* 2. LE MEGA MENU (au survol) */}
       <div className="absolute left-0 top-full w-full bg-transparent pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-50">
         <div className="bg-white w-full shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] border-t border-gray-100 relative">
-          
           {/* Ligne décorative dorée */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-amber-600"></div>
 
@@ -341,11 +383,12 @@ const MegaMenuButton = ({ title, data, scrolled, href }) => {
                     {category.items.map((item, idx) => (
                       <li key={idx}>
                         <Link
-                          href="#"
+                          href={item.href}
+                          onClick={onLinkClick} // Ferme le menu au clic
                           className="flex items-center group/item text-sm text-gray-500 hover:text-gray-900 transition-colors duration-300"
                         >
                           <span className="w-1.5 h-1.5 bg-gray-300 mr-4 transition-all duration-300 group-hover/item:bg-amber-600 group-hover/item:rotate-45"></span>
-                          <span>{item}</span>
+                          <span>{item.label}</span>
                         </Link>
                       </li>
                     ))}
@@ -354,26 +397,48 @@ const MegaMenuButton = ({ title, data, scrolled, href }) => {
               ))}
             </div>
 
-            {/* Image de droite */}
-            <div className="w-[35%] relative hidden lg:block group/image overflow-hidden">
-              <img
+            {/* --- IMAGE DE DROITE  --- */}
+
+            <Link
+              href = {title === "Intérieur" ? "/interieure" : "/exterieure"} //Lien dynamique selon le menu
+              onClick={onLinkClick} // Ferme le menu
+              className="w-[35%] relative hidden lg:block overflow-hidden bg-gray-900 group/image cursor-pointer"
+            >
+              {/* L'image avec effet Zoom + Couleur au survol */}
+              <Image 
                 src={data.image}
                 alt={title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover/image:scale-110"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] ease-out opacity-60 grayscale group-hover/image:opacity-100 group-hover/image:grayscale-0 group-hover/image:scale-105"
+                fill
               />
-              <div className="absolute inset-0 bg-gradient-to-l from-black/20 to-transparent"></div>
-              <div className="absolute bottom-12 left-12 text-white">
-                <p className="uppercase tracking-[0.2em] text-xs font-bold mb-2">
-                  Réalisations
+              
+              {/* Overlay dégradé */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              
+              {/* Contenu Texte + Bouton */}
+              <div className="absolute bottom-12 left-12 right-12 text-white">
+                <p className="uppercase tracking-[0.2em] text-xs font-bold mb-3 text-amber-500 translate-y-4 opacity-0 transition-all duration-500 group-hover/image:translate-y-0 group-hover/image:opacity-100">
+                  Explorer
                 </p>
-                <p className="font-serif text-3xl">Découvrir la galerie</p>
+                
+                <div className="flex items-end justify-between">
+                    <p className="font-serif text-4xl leading-tight translate-y-4 opacity-0 transition-all duration-500 delay-75 group-hover/image:translate-y-0 group-hover/image:opacity-100">
+                      Découvrir <br/> la page.
+                    </p>
+
+                    {/* Bouton Rond qui apparaît */}
+                    <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center transform translate-y-4 opacity-0 scale-0 transition-all duration-500 delay-150 group-hover/image:translate-y-0 group-hover/image:opacity-100 group-hover/image:scale-100 hover:!bg-amber-500 hover:!text-white">
+                        <ArrowRight size={20} />
+                    </div>
+                </div>
               </div>
-            </div>
+            </Link>
+             {/* -------------------------------- */}
+
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default Navbar;
