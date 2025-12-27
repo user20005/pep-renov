@@ -14,7 +14,7 @@ function Reveal({ children, width = "100%", delay = 0, duration = 1.2, y = 60 })
   useGSAP(() => {
     const element = ref.current;
 
-    // Animation : Du bas (y: 60) vers sa position (y: 0)
+    // Animation : Du bas (y: 60) vers sa position (y: 70)
     gsap.fromTo(
       element,
       {
@@ -23,7 +23,7 @@ function Reveal({ children, width = "100%", delay = 0, duration = 1.2, y = 60 })
         scale: 0.98 
       },
       {
-        y: 0,
+        y: 70,
         opacity: 1,
         scale: 1,
         duration: duration,

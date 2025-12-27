@@ -1,4 +1,4 @@
-'use client'; // <--- CETTE LIGNE EST OBLIGATOIRE POUR UTILISER onClick
+'use client';
 
 import React from 'react';
 import { Home, ArrowLeft, Construction } from 'lucide-react';
@@ -49,7 +49,6 @@ function NotFound() {
             Retour à l&apos;accueil
           </Link>
 
-          {/* Bouton Retour en arrière simple (Nécessite 'use client') */}
           <button 
             onClick={() => window.history.back()} 
             className="group px-8 py-4 border border-white/10 text-gray-300 text-xs font-bold uppercase tracking-[0.2em] hover:bg-white/5 hover:border-white/30 transition-all duration-300 rounded-sm flex items-center gap-2"

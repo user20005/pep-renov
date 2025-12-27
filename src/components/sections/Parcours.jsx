@@ -31,11 +31,11 @@ function Parcours() {
         },
       });
 
-      // TITRE : On utilise fromTo pour forcer l'état initial
+
       tl.fromTo(
         ".anim-left",
         { x: -50, opacity: 0 }, // DÉPART
-        { x: 0, opacity: 1, duration: 1, ease: "power1.out" } // ARRIVÉE
+        { x: 0, opacity: 1, duration: 1, ease: "power1.out" } 
       );
 
       // ÉTAPES : fromTo + stagger
@@ -171,11 +171,10 @@ function Parcours() {
                   e.preventDefault();
                   const section = document.getElementById("contact");
                   if (section) {
-                    // 1. On calcule la position de la section par rapport au haut de la page
                     const sectionTop =
                       section.getBoundingClientRect().top + window.scrollY;
 
-                    // 2. On retire 100px (la taille de ta Navbar) pour ne pas être caché dessous
+                    // 2. On retire 100px (la taille de ta Navbar) pour ajuster le scroll
                     const offsetPosition = sectionTop - 100;
 
                     // 3. On scrolle manuellement à cette position exacte

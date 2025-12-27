@@ -28,7 +28,6 @@ function Contact() {
 
   // --- ANIMATION DE TRANSITION ENTRE LES QUESTIONS ---
   const changeStep = (direction) => {
-    // 1. On fait sortir le contenu actuel
     gsap.to(".step-content", {
       x: direction === 'next' ? -20 : 20,
       opacity: 0,
@@ -97,7 +96,7 @@ function Contact() {
             {/* COLONNE DROITE : FORMULAIRE INTERACTIF */}
             <div className="lg:w-7/12 p-8 md:p-12 lg:p-16 flex flex-col relative">
                 {/* Numéro géant en fond */}
-                <div className="absolute top-6 right-8 text-9xl font-serif font-bold text-gray-50 select-none -z-10">
+                <div className="absolute top-6 right-8 text-9xl font-serif font-bold text-gray-50/90 select-none -z-10">
                   0{currentStep}
                 </div>
                 
@@ -180,7 +179,6 @@ function Contact() {
   );
 }
 
-// --- SOUS-COMPOSANTS ---
 const InputGroup = ({ label, type, focus }) => (
   <div className="relative group pt-4">
     <input 
@@ -194,6 +192,7 @@ const InputGroup = ({ label, type, focus }) => (
     </label>
   </div>
 );
+
 
 const RadioBox = ({ label, name }) => (
   <label className="flex items-center p-4 border border-gray-200 rounded-sm cursor-pointer hover:border-amber-500 hover:bg-[#FDFBF7] transition-all group has-[:checked]:border-amber-600 has-[:checked]:bg-[#FDFBF7]">

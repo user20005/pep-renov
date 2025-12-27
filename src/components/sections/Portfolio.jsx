@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
-import Link from 'next/link'; // 👈 Changement pour Next.js
+import Link from 'next/link'; 
 
 function Portfolio() {
   const projects = [
@@ -33,10 +33,10 @@ function Portfolio() {
   ];
 
   return (
-    <section className="py-24 bg-[#0B0C10] text-white overflow-hidden">
+    <section className="py-24 bg-[#0B0C10] text-white overflow-hidden" id='portfolio'>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
-        {/* EN-TÊTE : Titre + Bouton "Voir tout" alignés */}
+        {/* EN-TÊTE  */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
                 <span className="text-amber-500 text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
@@ -54,15 +54,14 @@ function Portfolio() {
             </Link>
         </div>
 
-        {/* GRILLE BENTO (Layout asymétrique) */}
+        {/* (Layout asymétrique) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
             {projects.map((project) => (
                 <div 
                     key={project.id} 
                     className={`group relative overflow-hidden rounded-sm cursor-pointer ${project.size}`}
                 >
-                    {/* Image avec Zoom lent */}
-                    {/* Note: Pour optimiser encore plus, tu pourras utiliser <Image /> de Next.js plus tard */}
+                    {/* Image de fond */}
                     <div className="absolute inset-0 bg-gray-800">
                         <img 
                             src={project.image} 

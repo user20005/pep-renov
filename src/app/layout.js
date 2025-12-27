@@ -1,4 +1,4 @@
-import "./globals.css"; // Ton ancien index.css renommé
+import "./globals.css"; 
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ScrollManager from "@/components/ScrollManager";

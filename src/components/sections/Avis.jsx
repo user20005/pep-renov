@@ -12,18 +12,15 @@ function Avis() {
 
   // --- ANIMATION GSAP (PC & MOBILE) ---
   useGSAP(() => {
-    // On crée l'animation infinie pour tout le monde
     tween.current = gsap.to(slider.current, {
-      xPercent: -50, // Déplace de 50% (car on a doublé le contenu)
+      xPercent: -50, // Déplace de 50% 
       repeat: -1,    // Infini
-      duration: 40,  // Vitesse (plus le chiffre est grand, plus c'est lent)
-      ease: "none",  // Vitesse linéaire (pas d'accélération/décélération)
+      duration: 40,  // Vitesse de défilement
+      ease: "none",  // Vitesse linéaire
     });
   }, { scope: container });
 
   // --- GESTION PAUSE / PLAY (PC & MOBILE) ---
-  // Sur PC : Hover = Pause
-  // Sur Mobile : Toucher = Pause
   const handlePause = () => tween.current && tween.current.pause();
   const handlePlay = () => tween.current && tween.current.play();
 
@@ -66,7 +63,7 @@ function Avis() {
     },
   ];
 
-  // On triple la liste pour être sûr qu'il n'y ait pas de "trou" sur les écrans très larges
+  // On triple la liste 
   const infiniteReviews = [...reviews, ...reviews, ...reviews];
 
   return (
@@ -102,12 +99,12 @@ function Avis() {
           {/* BANDE QUI BOUGE */}
           <div
             ref={slider}
-            className="flex w-max" // w-max force les éléments sur une seule ligne
+            className="flex w-max" 
           >
             {infiniteReviews.map((review, index) => (
               <div
                 key={index}
-                className="w-[300px] md:w-[450px] px-4 flex-shrink-0 select-none" // select-none évite de surligner le texte quand on touche
+                className="w-[300px] md:w-[450px] px-4 flex-shrink-0 select-none" 
               >
                 <div className="bg-[#F9F9F9] p-8 md:p-10 rounded-sm h-full relative border border-transparent hover:border-amber-100 transition-colors duration-300">
                   <Quote className="absolute top-6 right-6 text-amber-900/10 w-8 h-8" />

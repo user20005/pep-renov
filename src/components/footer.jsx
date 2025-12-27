@@ -5,7 +5,6 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, ArrowUp } from 'luc
 
 function Footer() {
   
-  // Fonction pour remonter en haut de page
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -15,7 +14,7 @@ function Footer() {
   return (
     <footer className="bg-gray-950 text-white pt-20 pb-10 border-t border-amber-900/20 relative">
       
-      {/* Bouton Retour en haut (Flottant ou intégré) */}
+      {/* Bouton Retour en haut */}
       <button 
         onClick={scrollToTop}
         className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-600 hover:bg-white hover:text-gray-900 text-white p-3 rounded-full shadow-lg transition-all duration-300 group"
@@ -38,7 +37,7 @@ function Footer() {
                 </span>
             </a>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Spécialiste de la rénovation haut de gamme en Île-de-France. 
+              Spécialiste de la rénovation en Île-de-France. 
               Nous transformons vos espaces de vie avec exigence et passion.
             </p>
             
@@ -123,7 +122,7 @@ function Footer() {
   );
 }
 
-// Composants utilitaires pour éviter la répétition
+
 const FooterLink = ({ text }) => (
   <li>
     <a href="#" className="text-sm text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block">

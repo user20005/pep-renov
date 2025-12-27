@@ -13,6 +13,7 @@ function Navbar() {
   const pathname = usePathname();
   // On considère qu'on est sur la home si pathname est "/"
   const isHomePage = pathname === "/";
+
   // La navbar est solide si on scroll OU si on n'est pas sur la home
   const isSolidNavbar = scrolled || !isHomePage;
 
@@ -288,8 +289,8 @@ const MobileAccordion = ({ title, id, current, set, data }) => (
 const MegaMenuButton = ({ title, data, scrolled, href }) => {
   return (
     <div className="group static h-full flex items-center">
+      
       {/* 1. LE LIEN PRINCIPAL (Bouton du menu) */}
-      {/* Si un href est fourni, on met un Link. Sinon, une simple div. */}
       {href ? (
         <Link
           href={href}
