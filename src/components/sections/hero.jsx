@@ -43,7 +43,7 @@ function Hero() {
         {/* --- 1. IMAGE MOBILE  --- */}
         <div className="block md:hidden absolute inset-0 w-full h-full z-0">
           <Image
-            src="pep-renov/hero-mobile.png" 
+            src="pep-renov/hero-mobile.png"
             alt="Intérieur d'exception"
             fill
             priority
@@ -55,14 +55,13 @@ function Hero() {
         {/* --- 2. IMAGE DESKTOP --- */}
         <div className="absolute md:block hidden inset-0 w-full h-full z-0">
           <Image
-            src="pep-renov/hero.png" 
+            src="pep-renov/hero.png"
             alt="Intérieur d'exception"
-            fill 
-            priority 
+            fill
+            priority
             quality={90}
             className="object-cover object-center "
           />
-
         </div>
 
         {/* --- OVERLAYS COMMUNS --- */}
@@ -70,7 +69,6 @@ function Hero() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/90 to-transparent"></div>
         </div>
-
 
         {/* --- CONTENU --- */}
         <div className="relative z-20 h-full max-w-7xl mx-auto px-6 md:px-2 flex items-center">
@@ -93,8 +91,8 @@ function Hero() {
 
             {/* Description */}
             <p className="text-gray-300 text-lg font-light leading-relaxed max-w-md border-l border-white/10 pl-6">
-              Nous redéfinissons les standards du luxe pour créer des espaces de
-              vie qui vous ressemblent.
+              Révélez l'essence de votre habitat avec PEP Rénovation. Une conception
+              sur-mesure, où l'élégance rencontre le confort absolu.
             </p>
 
             {/* Boutons */}
@@ -115,7 +113,6 @@ function Hero() {
             </div>
           </div>
         </div>
-
       </div>
 
       <style jsx global>{`

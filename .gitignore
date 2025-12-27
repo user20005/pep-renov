@@ -10,6 +10,17 @@
 !.yarn/releases
 !.yarn/versions
 
+
+#ignore packages.json
+/packages.json
+
+#ingore all config files
+/*.config.js
+/*.config.cjs
+/*.config.mjs   
+/*.config.json
+
+
 # testing
 /coverage
 
