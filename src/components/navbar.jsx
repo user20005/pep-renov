@@ -110,8 +110,8 @@ function Navbar() {
       <nav
         className={`fixed w-full z-50 top-0 transition-all duration-300 border-b lg:border-none border-gray-100 py-4 ${
           isSolidNavbar
-            ? "bg-white/90 backdrop-blur-md text-gray-900 shadow-md lg:py-2"
-            : "bg-transparent text-white lg:bg-white/10 lg:hover:bg-white/20"
+            ? "bg-white/90 backdrop-blur-sm text-gray-900 shadow-md lg:py-2"
+            : "backdrop-blur-sm text-white lg:bg-white/10 lg:hover:bg-white/20"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
