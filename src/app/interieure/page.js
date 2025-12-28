@@ -90,10 +90,10 @@ function Interieur() {
       anchor: "renovation-globale", // ID pour le scroll
       text: "Nous redessinons les volumes pour révéler le potentiel de votre bien. De la démolition structurelle à l'isolation performante, nous créons des espaces de vie fluides, lumineux et parfaitement optimisés.",
       tags: [ // Tags alignés assurance
-        "Rénovation complète", 
-        "Démolition intérieure", 
-        "Plâtrerie & Cloisonnement", 
-        "Isolation intérieure", 
+        "Rénovation complète",
+        "Démolition intérieure",
+        "Plâtrerie & Cloisonnement",
+        "Isolation intérieure",
         "Aménagement de Combles"
       ],
       image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2653&auto=format&fit=crop"
@@ -105,10 +105,10 @@ function Interieur() {
       anchor: "finitions-decoration", // ID pour le scroll
       text: "L'élégance réside dans le détail. Pose de parquets massifs, carrelages grands formats ou enduits décoratifs : nous apportons la touche finale et les textures qui donneront son caractère unique à votre intérieur.",
       tags: [ // Tags alignés assurance
-        "Carrelage & Sols durs", 
-        "Chapes & Sols coulés", 
-        "Peinture & Décoration", 
-        "Enduits décoratifs", 
+        "Carrelage & Sols durs",
+        "Chapes & Sols coulés",
+        "Peinture & Décoration",
+        "Enduits décoratifs",
         "Parquet"
       ],
       image: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=2670&auto=format&fit=crop"
@@ -120,10 +120,10 @@ function Interieur() {
       anchor: "pieces-techniques", // ID pour le scroll
       text: "Le confort invisible mais essentiel. Électricité connectée, plomberie de précision et chauffage performant : nous orchestrons les réseaux techniques pour garantir la pérennité et la modernité de votre habitat.",
       tags: [ // Tags alignés assurance
-        "Électricité & Domotique", 
-        "Plomberie & Sanitaire", 
-        "Création de Salles de Bain", 
-        "Cuisines", 
+        "Électricité & Domotique",
+        "Plomberie & Sanitaire",
+        "Création de Salles de Bain",
+        "Cuisines",
         "Chauffage électrique & VMC"
       ],
       image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=2670&auto=format&fit=crop"
@@ -137,13 +137,14 @@ function Interieur() {
       <div className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center z-0">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop"
-            alt="Architecture Extérieure"
+            src="/pep-renov/interieure/interieure.png"
+            alt="Architecture Intérieure"
             fill
-            className="object-cover opacity-60 scale-105 animate-[pulse_20s_infinite_alternate]"
             priority
+            quality={100} 
+            className="object-cover scale-105 contrast-[1.15] brightness-[0.95] saturate-[1.1]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-[#0B0C10]"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 mix-blend-multiply"></div>
         </div>
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
           <div className="overflow-hidden mb-6">
@@ -157,9 +158,6 @@ function Interieur() {
           <p className="hero-desc text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
             Chaque espace raconte une histoire. Nous transformons vos intérieurs en œuvres d'art fonctionnelles, où chaque détail est pensé pour inspirer et émerveiller.
           </p>
-        </div>
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gray-400">
-          <ArrowDown size={24} />
         </div>
       </div>
 
@@ -230,42 +228,42 @@ function Interieur() {
 
       {/* CTA FINAL */}
       <section className="relative h-[60vh] flex flex-col items-center justify-center overflow-hidden">
-          
-          {/* 1. IMAGE DE FOND (Intérieur) */}
-          <div className="absolute inset-0 z-0">
-            <Image 
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2600&auto=format&fit=crop"
-                alt="Projet Intérieur"
-                fill
-                className="object-cover"
-            />
-            {/* Overlay Noir pour le contraste */}
-            <div className="absolute inset-0 bg-black/60"></div>
-          </div>
 
-          {/* 2. CONTENU */}
-          <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-            <span className="text-amber-500 text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
-                Votre futur espace
+        {/* 1. IMAGE DE FOND (Intérieur) */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2600&auto=format&fit=crop"
+            alt="Projet Intérieur"
+            fill
+            className="object-cover"
+          />
+          {/* Overlay Noir pour le contraste */}
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        {/* 2. CONTENU */}
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+          <span className="text-amber-500 text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
+            Votre futur espace
+          </span>
+
+          <h2 className="font-serif text-5xl md:text-7xl text-white mb-10 leading-tight">
+            Prêt à sublimer <br /> votre intérieur ?
+          </h2>
+
+          <Link
+            href="/#contact"
+            className="group relative inline-flex items-center gap-4 px-12 py-5 overflow-hidden border border-white/30 hover:border-amber-500 transition-colors duration-300"
+          >
+            {/* Fond qui glisse au survol */}
+            <div className="absolute inset-0 bg-amber-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
+
+            <span className="relative z-10 text-white text-xs font-bold uppercase tracking-[0.2em] group-hover:text-white transition-colors">
+              Démarrer la transformation
             </span>
-            
-            <h2 className="font-serif text-5xl md:text-7xl text-white mb-10 leading-tight">
-                Prêt à sublimer <br/> votre intérieur ?
-            </h2>
-            
-            <Link 
-                href="/#contact"
-                className="group relative inline-flex items-center gap-4 px-12 py-5 overflow-hidden border border-white/30 hover:border-amber-500 transition-colors duration-300"
-            >
-                {/* Fond qui glisse au survol */}
-                <div className="absolute inset-0 bg-amber-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
-                
-                <span className="relative z-10 text-white text-xs font-bold uppercase tracking-[0.2em] group-hover:text-white transition-colors">
-                    Démarrer la transformation
-                </span>
-                <ArrowRight className="relative z-10 text-white w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
+            <ArrowRight className="relative z-10 text-white w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
       </section>
 
     </div>

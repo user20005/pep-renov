@@ -12,8 +12,10 @@ function Navbar() {
   const [mobileSubMenu, setMobileSubMenu] = useState("");
 
   const pathname = usePathname();
-  const isHomePage = pathname === "/";
-  const isSolidNavbar = scrolled || !isHomePage;
+
+
+  const isTopPage = pathname === "/" || pathname === "/interieure" || pathname === "/exterieure";
+  const isSolidNavbar = scrolled || !isTopPage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +69,7 @@ function Navbar() {
         ],
       },
     ],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop",
+    image: "/pep-renov/interieure/interieure.png",
   };
 
   const servicesExterieur = {
@@ -103,7 +105,7 @@ function Navbar() {
         ],
       },
     ],
-    image: "https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=2670&auto=format&fit=crop",
+    image: "/pep-renov/exterieure/ext1.png",
   };
   return (
     <>
