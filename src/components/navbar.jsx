@@ -37,122 +37,74 @@ function Navbar() {
   const servicesInterieur = {
     categories: [
       {
-        title: "Rénovation Globale",
+        title: "Agencement",
         items: [
-          { label: "Maison & Villa", href: "/interieure#renovation-globale" },
-          {
-            label: "Appartement Haussmannien",
-            href: "/interieure#renovation-globale",
-          },
-          {
-            label: "Loft & Surface Atypique",
-            href: "/interieure#renovation-globale",
-          },
-          {
-            label: "Réagencement complet",
-            href: "/interieure#renovation-globale",
-          },
-          {
-            label: "Transformation de bureaux",
-            href: "/interieure#renovation-globale",
-          },
+          { label: "Rénovation complète (Maison/Apt)", href: "/interieure#renovation-globale" }, // Couvert par l'ensemble des lots
+          { label: "Démolition intérieure", href: "/interieure#renovation-globale" }, // Activité 1.1 
+          { label: "Plâtrerie & Cloisonnement", href: "/interieure#renovation-globale" }, // Activité 4.4 
+          { label: "Isolation intérieure", href: "/interieure#renovation-globale" }, // Inclus dans 4.4 et 2.2 [cite: 93, 136]
+          { label: "Aménagement de Combles", href: "/interieure#renovation-globale" }, // Lié à 2.4 et 3.1 
         ],
       },
       {
-        title: "Pièces Techniques",
+        title: "Sols & Finitions",
         items: [
-          {
-            label: "Cuisines Haut de Gamme",
-            href: "/interieure#pieces-techniques",
-          },
-          {
-            label: "Salles de Bain & Spa",
-            href: "/interieure#pieces-techniques",
-          },
-          {
-            label: "Suite Parentale & Dressing",
-            href: "/interieure#pieces-techniques",
-          },
-          {
-            label: "Création de trémies & Escaliers",
-            href: "/interieure#pieces-techniques",
-          },
-          {
-            label: "Aménagement de Combles",
-            href: "/interieure#pieces-techniques",
-          },
+          { label: "Carrelage & Sols durs", href: "/interieure#finitions-decoration" }, // Activité 4.9 
+          { label: "Chapes & Sols coulés", href: "/interieure#finitions-decoration" }, // Activité 4.9 
+          { label: "Peinture & Décoration", href: "/interieure#finitions-decoration" }, // Activité 4.7 
+          { label: "Enduits décoratifs", href: "/interieure#finitions-decoration" }, // Inclus dans 4.7 [cite: 141]
+          { label: "Parquet (Pose flottante/collée)", href: "/interieure#finitions-decoration" }, // Inclus dans 2.4 (structure) ou 4.9
         ],
       },
       {
-        title: "Finitions & Décoration",
+        title: "Lots Techniques",
         items: [
-          {
-            label: "Peinture & Enduits décoratifs",
-            href: "/interieure#finitions-decoration",
-          },
-          {
-            label: "Sols (Parquet, Marbre, Béton)",
-            href: "/interieure#finitions-decoration",
-          },
-          {
-            label: "Menuiserie sur mesure",
-            href: "/interieure#finitions-decoration",
-          },
-          {
-            label: "Isolation & Cloisonnement",
-            href: "/interieure#finitions-decoration",
-          },
-          {
-            label: "Électricité & Domotique",
-            href: "/interieure#finitions-decoration",
-          },
+          { label: "Électricité & Domotique", href: "/interieure#pieces-techniques" }, // Activité 5.5 
+          { label: "Plomberie & Sanitaire", href: "/interieure#pieces-techniques" }, // Activité 5.1 
+          { label: "Création de Salles de Bain", href: "/interieure#pieces-techniques" }, // Combinaison 5.1 + 4.9
+          { label: "Cuisines (Raccordements)", href: "/interieure#pieces-techniques" }, // Plomberie/Elec
+          { label: "Chauffage électrique & VMC", href: "/interieure#pieces-techniques" }, // Activité 5.5 [cite: 158]
         ],
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop",
   };
 
   const servicesExterieur = {
     categories: [
       {
-        title: "Architecture & Façade",
+        title: "Gros Œuvre & Structure",
         items: [
-          { label: "Ravalement de Façade", href: "/exterieure#facade" },
-          { label: "Isolation Extérieure (ITE)", href: "/exterieure#facade" },
-          { label: "Traitement de la Pierre", href: "/exterieure#facade" },
-          { label: "Toiture & Zinguerie", href: "/exterieure#facade" },
-          { label: "Fenêtres & Baies Vitrées", href: "/exterieure#facade" },
+          { label: "Maçonnerie Générale", href: "/exterieure#extensions" }, // Activité 2.2 
+          { label: "Béton Armé", href: "/exterieure#extensions" }, // Activité 2.2 [cite: 89]
+          { label: "Charpente Bois", href: "/exterieure#extensions" }, // Activité 2.4 
+          { label: "Toiture & Couverture", href: "/exterieure#extensions" }, // Activité 3.1 
+          { label: "Démolition & Gros Œuvre", href: "/exterieure#extensions" }, // Activité 1.1 [cite: 83]
         ],
       },
       {
-        title: "Extensions & Structures",
+        title: "Façade & Isolation",
         items: [
-          { label: "Extension Maison & Garage", href: "/exterieure#extensions" },
-          { label: "Surélévation de toiture", href: "/exterieure#extensions" },
-          { label: "Véranda & Pergola Bio", href: "/exterieure#extensions" },
-          { label: "Maçonnerie Générale", href: "/exterieure#extensions" },
-          { label: "Démolition & Gros Œuvre", href: "/exterieure#extensions" },
+          { label: "Ravalement de Façade", href: "/exterieure#facade" }, // Activité 3.4 
+          { label: "Isolation Extérieure (ITE)", href: "/exterieure#facade" }, // Activité 3.5 
+          { label: "Enduits & Crépis", href: "/exterieure#facade" }, // Activité 3.4 [cite: 102]
+          { label: "Menuiseries Extérieures", href: "/exterieure#facade" }, // Activité 3.9 
+          { label: "Fenêtres & Baies Vitrées", href: "/exterieure#facade" }, // Inclus dans 3.9 [cite: 113]
         ],
       },
       {
-        title: "Paysage & Aménagement",
+        title: "Aménagements Extérieurs",
         items: [
-          {
-            label: "Terrasses (Bois, Pierre, Carrelage)",
-            href: "/exterieure#paysage",
-          },
-          { label: "Piscine & Bassin", href: "/exterieure#paysage" },
-          { label: "Allées & Pavage", href: "/exterieure#paysage" },
-          { label: "Clôtures & Portails", href: "/exterieure#paysage" },
-          { label: "Éclairage Extérieur", href: "/exterieure#paysage" },
+          { label: "Terrasses & Dallages", href: "/exterieure#paysage" }, // Activité 2.2 (Dallage) et 4.9 [cite: 90, 147]
+          { label: "Allées & Pavage", href: "/exterieure#paysage" }, // Activité 2.2 (Pavage) [cite: 90]
+          { label: "Clôtures & Murets", href: "/exterieure#paysage" }, // Maçonnerie 2.2
+          { label: "Éclairage Extérieur", href: "/exterieure#paysage" }, // Activité 5.5
+          { label: "Zinguerie & Gouttières", href: "/exterieure#paysage" }, // Activité 5.1 et 3.1 [cite: 158]
         ],
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=2670&auto=format&fit=crop",
   };
-
   return (
     <>
       <nav

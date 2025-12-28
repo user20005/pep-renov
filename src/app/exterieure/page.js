@@ -85,29 +85,47 @@ function Exterieur() {
   const sectionsData = [
     {
       id: "01",
-      category: "Façade & Isolation",
-      title: "Architecture & Façade",
-      anchor: "facade",
-      text: "La première impression est essentielle. Nous redonnons vie à vos façades tout en améliorant la performance énergétique de votre habitat grâce à des techniques d'isolation extérieure de pointe.",
-      tags: ["Ravalement de Façade", "Isolation Extérieure (ITE)", "Traitement de la Pierre", "Toiture & Zinguerie", "Fenêtres & Baies Vitrées"],
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop"
-    },
-    {
-      id: "02",
-      category: "Agrandissement",
-      title: "Extensions & Structures",
-      anchor: "extensions",
-      text: "Gagnez des mètres carrés sans déménager. Une extension vitrée pour le salon, une surélévation pour une suite parentale... Nous repoussons les murs avec une intégration architecturale parfaite.",
-      tags: ["Extension Maison & Garage", "Surélévation de toiture", "Véranda & Pergola Bio", "Maçonnerie Générale", "Démolition & Gros Œuvre"],
+      category: "Expertise",
+      title: "Gros Œuvre & Extensions", // Titre aligné Navbar
+      anchor: "extensions", // ID pour le scroll
+      text: "Repoussez les murs et redéfinissez votre habitat. De la surélévation technique à l'extension architecturale, nous maîtrisons le béton et le bois pour créer des volumes durables qui s'intègrent parfaitement à l'existant.",
+      tags: [ // Tags alignés assurance (Activités 1.1, 2.2, 2.4, 3.1)
+        "Maçonnerie Générale", 
+        "Béton Armé", 
+        "Charpente Bois", 
+        "Toiture & Couverture", 
+        "Extension & Surélévation"
+      ],
       image: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=2670&auto=format&fit=crop"
     },
     {
+      id: "02",
+      category: "Performance",
+      title: "Façade & Isolation", // Titre aligné Navbar
+      anchor: "facade", // ID pour le scroll
+      text: "La première impression est décisive. Nous allions esthétique et performance énergétique : isolation par l'extérieur, ravalements soignés et menuiseries haute performance pour une façade qui valorise votre patrimoine.",
+      tags: [ // Tags alignés assurance (Activités 3.4, 3.5, 3.9)
+        "Ravalement de Façade", 
+        "Isolation Extérieure (ITE)", 
+        "Enduits & Crépis", 
+        "Menuiseries Extérieures", 
+        "Fenêtres & Baies Vitrées"
+      ],
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop"
+    },
+    {
       id: "03",
-      category: "Outdoor Living",
-      title: "Paysage & Aménagement",
-      anchor: "paysage",
-      text: "Votre extérieur est le prolongement de votre intérieur. Terrasses, piscines, allées... Nous dessinons des espaces paysagers structurés pour profiter de chaque rayon de soleil.",
-      tags: ["Terrasses (Bois, Pierre)", "Piscine & Bassin", "Allées & Pavage", "Clôtures & Portails", "Éclairage Extérieur"],
+      category: "Art de Vivre",
+      title: "Aménagements Extérieurs", // Titre aligné Navbar
+      anchor: "paysage", // ID pour le scroll
+      text: "Prolongez votre intérieur vers l'extérieur. Terrasses en bois ou pierre, allées structurées et éclairages d'ambiance : nous dessinons des espaces à vivre à ciel ouvert, pensés pour la détente et la réception.",
+      tags: [ // Tags alignés assurance (Activités 2.2, 4.9, 5.5)
+        "Terrasses & Dallages", 
+        "Allées & Pavage", 
+        "Clôtures & Murets", 
+        "Éclairage Extérieur", 
+        "Zinguerie"
+      ],
       image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2670&auto=format&fit=crop"
     },
   ];

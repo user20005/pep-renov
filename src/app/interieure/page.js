@@ -86,29 +86,47 @@ function Interieur() {
     {
       id: "01",
       category: "Expertise",
-      title: "Rénovation Globale",
-      anchor: "renovation-globale", // Correspond au lien Navbar
-      text: "Nous ne faisons pas que rénover, nous redéfinissons les volumes. Supprimer un mur porteur, créer une mezzanine, ouvrir une façade... Tout est possible pour métamorphoser votre lieu de vie.",
-      tags: ["Maison & Villa", "Appartement Haussmannien", "Loft Atypique", "Réagencement complet", "Transformation de bureaux"],
+      title: "Agencement & Rénovation", // Titre aligné Navbar
+      anchor: "renovation-globale", // ID pour le scroll
+      text: "Nous redessinons les volumes pour révéler le potentiel de votre bien. De la démolition structurelle à l'isolation performante, nous créons des espaces de vie fluides, lumineux et parfaitement optimisés.",
+      tags: [ // Tags alignés assurance
+        "Rénovation complète", 
+        "Démolition intérieure", 
+        "Plâtrerie & Cloisonnement", 
+        "Isolation intérieure", 
+        "Aménagement de Combles"
+      ],
       image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2653&auto=format&fit=crop"
     },
     {
       id: "02",
-      category: "Savoir-Faire",
-      title: "Pièces Techniques",
-      anchor: "pieces-techniques", // Correspond au lien Navbar
-      text: "L'alliance parfaite entre ergonomie et esthétique. Marbre veiné, robinetterie laiton, menuiserie sur-mesure... Ces pièces deviennent les joyaux de votre habitation.",
-      tags: ["Cuisine Haut de Gamme", "Suite Parentale", "Spa Privé", "Création de trémies", "Aménagement de Combles"],
-      image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=2670&auto=format&fit=crop"
+      category: "Signature",
+      title: "Sols & Finitions", // Titre aligné Navbar
+      anchor: "finitions-decoration", // ID pour le scroll
+      text: "L'élégance réside dans le détail. Pose de parquets massifs, carrelages grands formats ou enduits décoratifs : nous apportons la touche finale et les textures qui donneront son caractère unique à votre intérieur.",
+      tags: [ // Tags alignés assurance
+        "Carrelage & Sols durs", 
+        "Chapes & Sols coulés", 
+        "Peinture & Décoration", 
+        "Enduits décoratifs", 
+        "Parquet"
+      ],
+      image: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=2670&auto=format&fit=crop"
     },
     {
       id: "03",
-      category: "Signature",
-      title: "Finitions & Décoration",
-      anchor: "finitions-decoration", // Correspond au lien Navbar
-      text: "La perfection ne supporte pas l'à-peu-près. Moulures, parquets point de Hongrie, éclairage architectural... Nous soignons chaque millimètre pour une signature unique.",
-      tags: ["Peinture & Matières", "Sols Nobles", "Domotique", "Menuiserie sur mesure", "Isolation & Cloisonnement"],
-      image: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=2670&auto=format&fit=crop"
+      category: "Savoir-Faire",
+      title: "Lots Techniques", // Titre aligné Navbar
+      anchor: "pieces-techniques", // ID pour le scroll
+      text: "Le confort invisible mais essentiel. Électricité connectée, plomberie de précision et chauffage performant : nous orchestrons les réseaux techniques pour garantir la pérennité et la modernité de votre habitat.",
+      tags: [ // Tags alignés assurance
+        "Électricité & Domotique", 
+        "Plomberie & Sanitaire", 
+        "Création de Salles de Bain", 
+        "Cuisines", 
+        "Chauffage électrique & VMC"
+      ],
+      image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=2670&auto=format&fit=crop"
     }
   ];
 
@@ -119,7 +137,7 @@ function Interieur() {
       <div className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center z-0">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=2670&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop"
             alt="Architecture Extérieure"
             fill
             className="object-cover opacity-60 scale-105 animate-[pulse_20s_infinite_alternate]"

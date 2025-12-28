@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "deploy": "gh-pages -d out",
-    "save": "git add . && git commit -m \"package update\" && git push",
+    "save": "git add . && git commit -m \"Mise à jour contact \" && git push",
     "full-deploy": "npm run save && npm run deploy"
 
   },
