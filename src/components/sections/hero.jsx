@@ -91,7 +91,7 @@ function Hero() {
 
             {/* Description */}
             <p className="text-gray-300 text-lg font-light leading-relaxed max-w-md border-l border-white/10 pl-6">
-              Révélez l'essence de votre habitat avec PEP Rénovation. Une conception
+              Révélez l'essence de votre habitat avec PEP RENOVATION. Une conception
               sur-mesure, où l'élégance rencontre le confort absolu.
             </p>
 
