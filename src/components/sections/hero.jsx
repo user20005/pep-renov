@@ -43,7 +43,7 @@ function Hero() {
         {/* --- 1. IMAGE MOBILE  --- */}
         <div className="block md:hidden absolute inset-0 w-full h-full z-0">
           <Image
-            src="pep-renov/hero-mobile-test.png"
+            src="/pep-renov/hero-mobile-test.png"
             alt="Intérieur d'exception"
             fill
             priority
@@ -55,7 +55,7 @@ function Hero() {
         {/* --- 2. IMAGE DESKTOP --- */}
         <div className="absolute md:block hidden inset-0 w-full h-full z-0">
           <Image
-            src="pep-renov/hero-test.png"
+            src="/pep-renov/hero-test.png"
             alt="Intérieur d'exception"
             fill
             priority
