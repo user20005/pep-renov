@@ -30,7 +30,7 @@ function Footer() {
           <div className="space-y-6">
             <a href="#" className="flex flex-col group">
                 <span className="text-2xl font-serif font-bold tracking-wide text-white">
-                    PER<span className="text-amber-600">.</span>RÉNOVATION
+                    PEP RÉNOVATION
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.3em] font-medium text-gray-500">
                     L&apos;Art de Bâtir
