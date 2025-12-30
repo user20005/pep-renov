@@ -149,20 +149,7 @@ function Parcours() {
               Nous avons modélisé un parcours client qui élimine l&apos;imprévu.
             </p>
 
-            <div className="flex flex-col gap-5 border-t border-amber-900/10 pt-8">
-              <div className="flex items-center gap-3 text-sm font-medium text-gray-600">
-                <CheckCircle2 size={18} className="text-amber-600" /> Respect
-                absolu des délais
-              </div>
-              <div className="flex items-center gap-3 text-sm font-medium text-gray-600">
-                <CheckCircle2 size={18} className="text-amber-600" /> Prix ferme
-                et définitif
-              </div>
-              <div className="flex items-center gap-3 text-sm font-medium text-gray-600">
-                <CheckCircle2 size={18} className="text-amber-600" />{" "}
-                Interlocuteur unique dédié
-              </div>
-            </div>
+           
 
             <div className="mt-12">
               <a
